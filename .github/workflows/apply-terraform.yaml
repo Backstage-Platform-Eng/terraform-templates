@@ -1,5 +1,5 @@
 # Define the name of the GitHub Action workflow
-name: Create an ec2 instance
+name: Create Infrastructure
 # This workflow is manually triggered using the GitHub Actions UI
 on:
   workflow_dispatch:
@@ -44,9 +44,6 @@ jobs:
   apply_network:
     # Use the latest Ubuntu runner
     runs-on: ubuntu-latest
-    
-    # Execute this step only if the action input is "apply"
-    if: ${{ github.event.inputs.action == 'apply' }}
     # Define the steps for this job
     steps:
     
