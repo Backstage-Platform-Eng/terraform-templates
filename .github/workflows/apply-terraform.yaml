@@ -69,11 +69,11 @@ jobs:
 
 # adding aws keys. Please store the value of these key in GitHub variables
     - name: Configure credentials for ${{ inputs.environment }}
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: "arn:aws:iam::471112653618:role/github-action"
-          aws-region: ${{ inputs.awsRegion }}
-          role-session-name: github-actions-cd
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: "arn:aws:iam::471112653618:role/github-action"
+        aws-region: ${{ inputs.awsRegion }}
+        role-session-name: github-actions-cd
     
     # Initialize Terraform 
     - name: Terraform Init
