@@ -99,7 +99,7 @@
 #       working-directory: network
 
 name: Apply Terraform
-on:e
+on:
   workflow_dispatch:
     inputs:
       awsAccountId:
