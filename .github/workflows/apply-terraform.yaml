@@ -99,7 +99,7 @@
 #       working-directory: network
 
 name: Apply Terraform
-on:
+on:e
   workflow_dispatch:
     inputs:
       awsAccountId:
@@ -112,6 +112,7 @@ on:
 jobs:
   apply_network:
     runs-on: ubuntu-latest
+    # Define the steps for this job
     steps:
     
     - name: Checkout code
