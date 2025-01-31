@@ -1,8 +1,8 @@
-# region = "ap-southeast-1"
-# project_name = "arc-platform"
-# environment = "poc"
+region = "ap-southeast-1"
+project_name = "arc-platform"
+environment = "poc"
 
-#kubernetes_version = 1.32
+kubernetes_version = 1.32
 map_additional_iam_users = [
     {
       username = "admin",
@@ -10,11 +10,11 @@ map_additional_iam_users = [
       userarn  = "arn:aws:iam::471112653618:user/harshit.kumar"
     }
   ]
-#instance_types = ["t3.small"]
+instance_types = ["t3.small"]
 kubernetes_labels = {}
-# desired_size = 1
-# max_size = 1
-# min_size = 1
+desired_size = 2
+max_size = 2
+min_size = 1
 addons = [
   // https://docs.aws.amazon.com/eks/latest/userguide/managing-vpc-cni.html#vpc-cni-latest-available-version
   {
@@ -34,7 +34,7 @@ addons = [
   }
 ]
 kubernetes_namespace = "arc-platform"
-#capacity_type = "SPOT"
+capacity_type = "SPOT"
 create_node_group = true
 
 ##################################################################################

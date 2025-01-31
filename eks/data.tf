@@ -25,9 +25,9 @@ data "aws_subnets" "private" {
     values = ["*private*"]
   }
   filter {
-    name = "tag:Environment"
+    name = "tag:Project"
 
-    values = ["${var.environment}"]
+    values = ["${var.project_name}"]
   }
 }
 
@@ -38,8 +38,8 @@ data "aws_subnets" "public" {
     values = ["*public*"]
   }
   filter {
-    name = "tag:Environment"
+    name = "tag:Project"
 
-    values = ["${var.environment}"]
+    values = ["${var.project_name}"]
   }
 }
